@@ -88,6 +88,7 @@ export default class JpegCameraHtml5 extends JpegCameraBase {
 
     this.video = document.createElement('video');
     this.video.autoplay = true;
+    this.video.setAttribute('playsinline', '')
     if (this.options.previewMirror) addPrefixedStyle(this.video, 'transform', 'scalex(-1.0)');
 
     if (window.AudioContext) {
