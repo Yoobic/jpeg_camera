@@ -836,6 +836,7 @@ var JpegCameraHtml5 = function (_JpegCameraBase) {
 
       this.video = document.createElement('video');
       this.video.autoplay = true;
+      this.video.setAttribute('playsinline', '')
       if (this.options.previewMirror) (0, _jpeg_camera.addPrefixedStyle)(this.video, 'transform', 'scalex(-1.0)');
 
       if (window.AudioContext) {
